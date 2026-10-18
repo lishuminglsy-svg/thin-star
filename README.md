@@ -10,11 +10,11 @@ Independent entertainment and poster project by **Rogers Li**.
 
 ## GitHub 发布
 
-将本目录内容推送至 GitHub 仓库的 `main` 分支，在 Settings → Pages → Source 选择 **GitHub Actions**，随附工作流会发布网站。也可在 Pages 选择 **Deploy from a branch → main → / (root)**，使用静态根目录直接发布。无需设置任何密钥。
+将本目录内容推送至 GitHub 仓库的 `main` 分支，在 Settings → Pages → Source 选择 **Deploy from a branch → main → / (root)**，使用静态根目录直接发布。此后每次提交自动更新。无需构建或设置任何密钥。
 
 GitHub 免费账号的 Pages 通常要求公开源代码仓库。公开仓库及默认 `账号.github.io` 地址会显示账号名；网页本身不出现 GitHub 名字，不等于账号匿名。使用艺术名专用账号，或独立域名配合适合隐私目标的托管与仓库配置。自定义域名也不能保证隐藏 DNS、Git 历史或公开仓库里的身份关联。
 
-绑定自有域名后，在 GitHub Pages 配置 Custom domain 与 HTTPS，并按官方说明配置 DNS。把 `config.js` 的 `publicUrl` 设置为真实 HTTPS 网站地址；不要填写未发布的占位域名。留空时自动使用实际 HTTPS 页面地址。二维码打开创作页，不会将照片上传或公开成个人链接。本机 HTTP 预览不生成假二维码。
+绑定自有域名后，在 GitHub Pages 配置 Custom domain 与 HTTPS，并按官方说明配置 DNS。把 `config.js` 的 `publicUrl` 设置为真实 HTTPS 网站地址，并同步修改 `index.html` 中的 `og:image` 封面地址；不要填写未发布的占位域名。留空时自动使用实际 HTTPS 页面地址。二维码打开创作页，不会将照片上传或公开成个人链接。本机 HTTP 预览不生成假二维码。更换域名后需要重新导出海报和二维码；已经下载的二维码仍指向旧网址。
 
 ## 大陆访问
 
