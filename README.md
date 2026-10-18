@@ -1,2 +1,33 @@
-# thin-star
-薄肌之星 THIN STAR — an independent photo-poster project by Rogers Li
+# 薄肌之星 THIN STAR
+
+Independent entertainment and poster project by **Rogers Li**.
+
+第一版为免登录手机网页：本机照片处理、即时海报预览、三种配色、3:4 / 9:16 / 1:1 导出、系统分享、本机作品管理及中英文切换。所有资源随站打包，无 Google Fonts、第三方 CDN、ChatGPT 或外部 API 运行依赖。封面为 AI 生成的概念视觉，非真实参赛者。
+
+## 运行
+
+这是无构建步骤的静态网站。用任意静态 HTTP 服务打开根目录。使用 HTTPS 正式部署，以支持系统分享、剪贴板等能力。系统分享及下载行为由浏览器决定；不支持时显示下载或长按保存入口。iPhone HEIC 在浏览器能解码时可用；无法解码会提示转成 JPG。
+
+## GitHub 发布
+
+将本目录内容推送至 GitHub 仓库的 `main` 分支，在 Settings → Pages → Source 选择 **GitHub Actions**，随附工作流会发布网站。也可在 Pages 选择 **Deploy from a branch → main → / (root)**，使用静态根目录直接发布。无需设置任何密钥。
+
+GitHub 免费账号的 Pages 通常要求公开源代码仓库。公开仓库及默认 `账号.github.io` 地址会显示账号名；网页本身不出现 GitHub 名字，不等于账号匿名。使用艺术名专用账号，或独立域名配合适合隐私目标的托管与仓库配置。自定义域名也不能保证隐藏 DNS、Git 历史或公开仓库里的身份关联。
+
+绑定自有域名后，在 GitHub Pages 配置 Custom domain 与 HTTPS，并按官方说明配置 DNS。把 `config.js` 的 `publicUrl` 设置为真实 HTTPS 网站地址；不要填写未发布的占位域名。留空时自动使用实际 HTTPS 页面地址。二维码打开创作页，不会将照片上传或公开成个人链接。本机 HTTP 预览不生成假二维码。
+
+## 大陆访问
+
+网站本身不依赖需要访客登录或绕过网络限制的服务。GitHub Pages 的大陆可达性、速度及微信/抖音/小红书内置浏览器对外链和二维码的处理，仍需要实网验证，不能保证。静态文件也可原样部署至其他托管；如果以后选择大陆托管，按服务商要求办理域名与网站手续。保留 GitHub 作为源码和发布来源。
+
+## 数据与范围
+
+图片在浏览器内重绘、缩放并导出，不发送到服务器；导出图不继承原 EXIF。最多保留十二张下载过的海报于当前浏览器 IndexedDB，超过后移除最早的一张。本机存储可能受浏览器清理和容量限制，请下载留存。
+
+本版不是提案中完整的 Godot 社交系统：采用原生 HTML/CSS/Canvas 来实现轻量首屏、手机原生输入和分享。未包含账号、公开上传服务器、审核、评论、学校数据、积分账本、排行榜、PK 或原视频播放器。上线这些功能需要独立后端和实际运营配置，不能通过 GitHub 静态托管直接实现。灵感内容与真人动态已区分。
+
+## 视觉与署名
+
+背景 #090f16，薄荷绿 #94efbe，科技蓝和银色海报变体。字体使用系统字体栈，中文优先苹方或微软雅黑，英文优先系统无衬线。支持刘海安全区、动态视口、小屏表单和减少动态效果偏好。所有公开署名为 Rogers Li。
+
+二维码编码库为 qrcode-generator 1.4.4，Copyright (c) 2009 Kazuhiko Arase，MIT 许可，见 vendor/qrcode-LICENSE.txt。

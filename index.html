@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090f16">
+  <meta name="description" content="薄肌之星。上传一张照片，把你的薄肌态度做成一张海报。独立娱乐创作 by Rogers Li。">
+  <meta property="og:title" content="薄肌之星 · THIN STAR">
+  <meta property="og:description" content="薄肌，是一种看涨的态度。做一张属于你的薄肌海报。">
+  <meta property="og:type" content="website">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>薄肌之星 · THIN STAR</title>
+  <link rel="icon" href="assets/star.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="vendor/qrcode.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳至内容 / Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="薄肌之星首页"><span class="brand-star">✳</span><span data-i18n="brand">薄肌之星</span><span class="brand-en">THIN STAR</span></a>
+    <nav class="desktop-nav" aria-label="主导航"><a href="#discover" data-i18n="discover">发现</a><button data-action="mine" data-i18n="mine">我的作品</button><button data-action="about" data-i18n="about">关于薄肌</button></nav>
+    <div class="header-tools"><button id="language" class="lang" aria-label="Switch language">EN</button><button class="small-primary" data-action="create"><span>＋</span><span data-i18n="create">开始创作</span></button></div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-art" src="assets/hero.webp" width="1536" height="1024" alt="薄荷绿光线中的金属薄肌雕塑">
+      <div class="hero-shade"></div>
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> THE NEXT BLUE CHIP IS YOU</p><h1 id="hero-title" data-i18n-html="heroTitle">薄肌，<br>是一种<span>看涨</span>的态度。</h1><p class="hero-sub" data-i18n="heroSub">不卷维度，保持涨势。<br>把你的薄肌态度，做成一张海报。</p><div class="hero-actions"><button class="primary" data-action="create"><svg viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M5 15v5h14v-5"/></svg><span data-i18n="uploadStart">上传照片，立即出片</span><span>↗</span></button><a href="#discover" class="text-link" data-i18n="lookAround">先逛逛 ↓</a></div><p class="hero-meta" data-i18n="heroMeta">无需登录 · 照片仅在本机处理</p></div>
+      <div class="art-label"><span class="corner">⌜</span><div>THIN IS THE NEW STRONG<small>VOL. 001 / BODY × CULTURE</small></div><span class="corner">⌟</span></div>
+      <div class="hero-bottom"><span>EST. 2026</span><span>AN INDEPENDENT PROJECT BY ROGERS LI</span><span class="desktop-only">SCROLL TO EXPLORE ↓</span></div>
+    </section>
+    <div class="ticker" aria-label="薄肌宣言"><span>THIN STAR <b>↗</b></span><span data-i18n="ticker1">轻装上阵</span><i>✳</i><span>LONG-TERM ENERGY</span><i>✳</i><span data-i18n="ticker2">不做空自己</span><i>✳</i><span>STAY LEAN. STAY BULLISH.</span><i>✳</i><span class="desktop-only">THIN STAR ↗</span></div>
+    <section class="discover section" id="discover" aria-labelledby="discover-title">
+      <div class="section-top"><div><p class="eyebrow muted">THE CULTURE BOARD</p><h2 id="discover-title" data-i18n="boardTitle">薄肌灵感板<span class="green">.</span></h2></div><span class="section-number">01 — 03</span></div>
+      <div class="filters" role="group" aria-label="作品筛选"><button class="active" data-filter="all" aria-pressed="true" data-i18n="all">全部灵感</button><button data-filter="mint" aria-pressed="false" data-i18n="mint">薄肌蓝筹</button><button data-filter="blue" aria-pressed="false" data-i18n="blue">科技狠活</button><button data-filter="silver" aria-pressed="false" data-i18n="silver">长期持有</button></div>
+      <div class="gallery" id="gallery"></div>
+      <div class="board-note"><span class="tiny-star">✳</span><p data-i18n="boardNote">灵感样张 · 概念视觉，不是真人用户动态</p><button data-action="create" class="text-link"><span data-i18n="makeMine">做一张我的</span> ↗</button></div>
+    </section>
+    <section class="manifesto section"><div class="manifesto-top"><span class="eyebrow">LESS BULK. MORE AURA.</span><span>✳</span></div><h2 data-i18n-html="manifesto">你的下一支蓝筹，<br>是<span>你自己。</span></h2><div class="manifesto-bottom"><p data-i18n="manifestoSub">灵感来自孙宇晨与 Alan 的薄肌讨论。<br>一点自信，一点幽默，刚刚好。</p><button data-action="create" class="round-arrow" aria-label="开始创作">↗</button></div></section>
+    <section class="my-section section" id="my-works" hidden><div class="section-top"><div><p class="eyebrow muted">YOUR PERSONAL COLLECTION</p><h2 data-i18n="myTitle">我的作品</h2></div><span class="tag" data-i18n="localOnly">仅此设备</span></div><div id="my-gallery" class="my-gallery"></div><p class="local-note" data-i18n="localNote">作品保存在当前浏览器，清理浏览器数据会移除。请下载留存。</p></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#"><span class="brand-star">✳</span><span data-i18n="brand">薄肌之星</span></a><p>CREATED BY <strong>Rogers Li</strong></p><div><button data-action="about" data-i18n="projectInfo">项目说明</button><button data-action="privacy" data-i18n="privacy">隐私</button><button data-action="share" data-i18n="shareSite">分享本站 ↗</button></div><small data-i18n="independent">独立娱乐创作，与孙宇晨、Alan 无官方合作或代言关系。</small></footer>
+  <nav class="mobile-nav" aria-label="手机导航"><a href="#discover"><svg viewBox="0 0 24 24"><path d="m12 3 9 9-9 9-9-9zM9 12l3 3 3-3-3-3z"/></svg><span data-i18n="discover">发现</span></a><button class="mobile-create" data-action="create"><span>＋</span><b data-i18n="create">开始创作</b></button><button data-action="mine"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m4 15 5-5 4 5 3-3 4 4"/></svg><span data-i18n="mine">我的作品</span></button></nav>
+  <dialog id="studio" class="studio"><div class="dialog-header"><div><span class="eyebrow">THIN STAR STUDIO</span><h2 data-i18n="studioTitle">你的薄肌，准备上市。</h2></div><button class="icon-btn" data-close="studio" aria-label="关闭 / Close">×</button></div><div class="studio-body"><div class="poster-wrap"><canvas id="poster" width="1080" height="1440" aria-label="海报实时预览"></canvas><div id="poster-busy" hidden data-i18n="processing">正在处理照片…</div></div><form id="editor" class="editor"><input id="photo" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" hidden><button type="button" class="upload-zone" id="upload"><span>＋</span><b data-i18n="choosePhoto">选择一张照片</b><small data-i18n="photoTypes">JPG / PNG / WebP · 最大 20 MB</small></button><div class="field"><span data-i18n="chooseStyle">01 / 选择风格</span><div class="style-options"><button type="button" class="swatch active mint" data-style="mint" aria-label="薄肌蓝筹 / Mint" aria-pressed="true"></button><button type="button" class="swatch blue" data-style="blue" aria-label="科技狠活 / Blue" aria-pressed="false"></button><button type="button" class="swatch silver" data-style="silver" aria-label="长期持有 / Silver" aria-pressed="false"></button><b id="style-name">薄肌蓝筹</b></div></div><label class="field"><span data-i18n="nickname">02 / 你的昵称</span><input id="nickname" maxlength="20" placeholder="THIN STAR" autocomplete="off"></label><label class="field"><span data-i18n="caption">03 / 一句话态度</span><input id="caption" maxlength="28" placeholder="今天，也看涨自己。" autocomplete="off"></label><div class="field"><span data-i18n="format">04 / 海报比例</span><div class="segments"><button type="button" data-format="3:4" class="active" aria-pressed="true">3:4 <small data-i18n="xiaohongshu">小红书</small></button><button type="button" data-format="9:16" aria-pressed="false">9:16 <small data-i18n="douyin">抖音</small></button><button type="button" data-format="1:1" aria-pressed="false">1:1 <small>X</small></button></div></div><label class="crop-control" hidden><span data-i18n="crop">照片上下位置</span><input type="range" id="crop" min="0" max="100" value="50"></label><label class="consent"><input type="checkbox" id="consent"><span data-i18n="consent">我已满 18 岁，且拥有照片的使用权。</span></label><p class="editor-note" data-i18n="editorNote">照片仅在本机处理，不上传服务器。二维码打开本站创作页。</p><button type="submit" class="primary wide" id="save"><span data-i18n="savePoster">保存海报</span> ↓</button><button type="button" class="secondary wide" id="share-poster" data-i18n="nativeShare">分享海报 ↗</button><div id="download-fallback" hidden><a id="poster-download" download="thin-star.png" data-i18n="downloadAgain">点击下载海报</a><p data-i18n="longPress">如浏览器未保存，请打开图片后长按保存。</p><a id="poster-open" target="_blank" rel="noopener" data-i18n="openImage">打开海报</a></div></form></div></dialog>
+  <dialog id="info-dialog" class="info-dialog"><div class="dialog-header"><h2 id="info-title"></h2><button class="icon-btn" data-close="info-dialog" aria-label="关闭 / Close">×</button></div><div id="info-content"></div></dialog>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"薄肌之星 THIN STAR","author":{"@type":"Person","name":"Rogers Li"},"inLanguage":["zh-CN","en"]}</script>
+</body>
+</html>
